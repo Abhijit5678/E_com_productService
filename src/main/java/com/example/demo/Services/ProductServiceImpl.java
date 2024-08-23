@@ -19,6 +19,9 @@ import jakarta.persistence.criteria.Order;
 
 @Service
 public class ProductServiceImpl implements ProductService{
+	
+	 @Autowired
+	    private OrderClient orderClient;
 	private final RestTemplate restTemplate;
 	@Autowired
     public ProductServiceImpl(RestTemplate restTemplate) {
@@ -70,6 +73,13 @@ public class ProductServiceImpl implements ProductService{
         
        
     
+	}
+
+	@Override
+	public OrderBean getOrderById(int orderId) {
+		OrderBean result=orderClient.getProductById(orderId);
+		System.out.println(result);
+		return result;
 	}
 
 	

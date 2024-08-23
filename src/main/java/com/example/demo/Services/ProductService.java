@@ -13,4 +13,6 @@ public interface ProductService {
 
 	List<OrderBean> getOrdersList(long productId);
 
+	OrderBean getOrderById(int orderId);
+
 }
