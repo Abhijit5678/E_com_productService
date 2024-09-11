@@ -15,4 +15,6 @@ public interface ProductService {
 
 	OrderBean getOrderById(int orderId);
 
+	String unreliableService();
+
 }
